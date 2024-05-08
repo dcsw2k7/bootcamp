@@ -16,17 +16,17 @@ public class DemoPrimitives{
     int k = a + x * 8;
     System.out.println (k); //11
 
-    int l = 33;
+    int l = 33 / x;
     System.out.println (l); //11
-    int r = 32;
+    int r = 32 / x;
     System.out.println (r); //10
     
     //remainder
     // % 整數除後會是餘數
 
     int remainder = 10 % 3; //1
-    int divide = 10 /33//3
-    
-
+    int divide = 10 /33 ;//3
+    System.out.println (remainder); //1
+    System.out.println (divide); //3
   }
 }
