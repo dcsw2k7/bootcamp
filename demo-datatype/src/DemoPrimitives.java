@@ -28,5 +28,21 @@ public class DemoPrimitives{
     int divide = 10 /33 ;//3
     System.out.println (remainder); //1
     System.out.println (divide); //3
+
+
+    //2024.05.10
+
+    double d1=10.3;
+    double d2=10.34567;
+    double d3=110.999;
+
+    double result2 = d1 + d2 - d3; //10.3 + 10.3xxx + 110
+    System.out.println(result2);
+   
+    double result3 = 0.1 + 0.2;
+    System.out.println(result3); //0.3000000000
+
+    double result4 = 2 + 4 * 0.25 * 3 / 2 - 10;
+    System.out.println(result4); // 2 + (4 * 0.25 * 3 / 2) -10 -> -6.5
   }
 }
