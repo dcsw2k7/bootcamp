@@ -17,6 +17,9 @@ public class DemoIf {
 
     int a = 10;
     int b = 7;
+    int c = 10;
+    int d = 7;
+
     // print max = 10
     // if...
 
@@ -25,8 +28,16 @@ public class DemoIf {
     } else{
       System.out.println("Max is b=" + b);
     }
+
+      if (d > c){
+        System.out.println("Max is a=" + a);
+      } else{
+        System.out.println("Max is b=" + b);
+
+
     }
-    }
+  }
+}
 
   
   

@@ -28,7 +28,9 @@ public class DemoPrimitives{
     int divide = 10 /33 ;//3
     System.out.println (remainder); //1
     System.out.println (divide); //3
-
+    int xx = 5;
+    int yy = 2;
+    System.out.println(xx % yy);
 
     //2024.05.10
 
