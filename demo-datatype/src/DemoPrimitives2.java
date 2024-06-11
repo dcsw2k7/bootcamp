@@ -8,7 +8,7 @@ public class DemoPrimitives2 {
     long l4 = 63; // assign int value 63 to long variable l4 (int value -> long value)
     //int i1 = 4L; // you cannot assign long value to int variable, because long is a type highter than int
 
-    // byte -> short -> int -> long -> float -> double (JAVA可以由低去高)
+    // byte -> short -> int -> long -> float -> double (由低去高 無損耗)
     // char -> int(ascii)
     double d1 = 1.8;
     double d2 = 1.8d;
@@ -16,7 +16,7 @@ public class DemoPrimitives2 {
 
     byte b1 = 10; // ok, why ? 10 int value -> byte
 
-    // you can only explicitly assign a value that with a type highter than the data type. (由高去低會有損失)
+    // you can only explicitly assign a value that with a type highter than the data type. (由高去低 有損失)
     float f3 = (float) 1.0d; // downcast (overflow/ precision loss)
 
     short s1 = 130;

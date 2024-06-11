@@ -140,7 +140,123 @@ public class DemoArray {
                 result2 += c4[i];
                }
             }
-        System.out.println(result2);
+        System.out.println(result2);  //obkta
+
+        //28May2024
+        // averge 平均
+        int[] arr5 = new int[] {4, 8, 3};
+        int sum = 0;
+        int count2 = 0;
+        for (int i = 0; i < arr5.length; i++) {
+            sum += arr5[i];
+            count2++;
+
+        }
+        System.out.println(sum / count2);  // (4 + 8 + 3) / 2
+
+
+        // swapping in array
+        int[] arr6 = new int[] {6, 10, -4, 15};
+        // swap -4 and 6 -> [-4, 10, 6, 15]
+        int temp = arr6[2];
+        arr6[2] = arr6[0];
+        arr6[0] = temp;
+        System.out.println(Arrays.toString(arr6)); // [-4, 10, 6, 15]
+
+        
+        // Level 1;
+        // arr6 -> [-4, 10, 6, 15]
+        // move the first elment to the tail of the array
+        // result [10, 6, 15, -4]
+        int t = -1;
+        for ( int i = 0; i < arr6.length - 1; i++) {  
+            // arr.length -1 什麼要-1 , 因為行ARR6內有多少個行幾多次,有4個行4次,
+            // arr.length = 4
+            // int i = 0,次數 i < 4,每之自加1 i++
+            // i = i + 1 , 
+            // 0 + 1 = 1, i = 1, 1 < 7 next, 1 不等 0 AND 1 除 2 (0.5)相等 0, 
+            // 1 + 1 = 2, i = 2, 2 < 7 next, 2 不等 0 AND 2 除 2 (1.0) 相等 0
+            // 2 + 1 = 3, i = 3, 3 < 7 next, 3 不等 0 AND 3 除 2 (1.5) 相等 0
+            // 3 + 1 = 4, i = 4, 4 < 7 next, 4 不等 0 AND 4 除 2 (2.0) 相等 0
+            // 4 + 1 = 5, i = 5, 5 < 7 next, 5 不等 0 AND 5 除 2 (2.5) 相等 0
+            // 5 + 1 = 6, i = 6, 6 < 7 next, 6 不等 0 AND 6 除 2 (3.0) 相等 0
+            // 6 + 1 = 7, i = 7, 7 < 7 end
+            t = arr6[i];
+            arr6[i] = arr6[i + 1];
+            arr6[i + 1] = t;
+        }
+        System.out.println(Arrays.toString(arr6)); // [10, 6, 15, -4]
+
+        // level 2:
+        // move the max elemnet to the tail
+        // now : [10, 6, 15, -4]
+        // 1 st round: [6, 10, 15, -4]
+        // 2 st round: [6, 10, 15, -4]
+        // 2 st round: [6, 10, -4, -15
+        for (int i = 0; i < arr6.length -1; i++) {
+            if (arr6[i] > arr6[i + 1]) {
+                // swap
+                t = arr6[i];
+                arr6[i] = arr6[i + 1];
+                arr6[i + 1] = t;
+            }
+        }
+        System.out.println(Arrays.toString(arr6)); // [6, 10 ,-4, 15]
+
+
+        // level 3:
+        // sorting -> [-4, 6, 10, 15]
+        // bubbl sort
+        // for loop
+        // nested loop
+        for (int i = 0; i < arr6.length -1; i++) { // round
+            for (int j = 0; j < arr6.length -i -1; j++) { // moving
+                if (arr6[j] > arr6[j + 1]) {
+                    t = arr6[j];
+                    arr6[j] = arr6[j + 1];
+                    arr6[j + 1] = t;
+                }
+            }
+        }
+        System.out.println(Arrays.toString(arr6)); // [-4, 6, 10, 15]
+        
+
+        // Swap char value
+        String str = "hello"; // swap e and 0 -> holle
+        // convert char[]
+        // for loop + charAt()
+        char[] arr7 = new char[str.length()] ;
+        char t2 = ' ';
+        // for (int i = 0; i < str.length(); i++) {
+        //    arr7[i] = str.chatAt(i);
+        // }        
+        // alternative ( String -> char[] )
+        char[] arr7 = str.toCharArray(); // ['h', 'e', 'l', 'l', 'o']
+
+
+
+        t2 = arr7[1];
+        arr7[1] = arr7[4];
+        arr7[4] = t2;
+        str = String.valueOf(arr7); // assign a new String value to variable str
+        System.out.println(str); // holle
+
+
+
+        // Sorting -> [-4, 6, 10, 15] 排序
+        // for loop
+        // nested loop 
+        //int[] arr7 = new int[] {-4, 6, 10, 15};{
+       //     for ()
+
+       // }
+
+
+
+
+
+
+
 
 
         }

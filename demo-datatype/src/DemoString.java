@@ -1,6 +1,9 @@
+
+import java.awt.datatransfer.StringSelection;
+
 public class DemoString {
 
-  public static void main(String[]args){
+  public static void main(String[]args)  {
     String x = "hello";
     String y = "$(@*#)@!#*)!";
     String dollar = "$10";
@@ -31,7 +34,7 @@ public class DemoString {
     // check if t length >= 4, if yes, print hello, else goodbye
     if (t.length() >= 4) {
       System.out.println("hello");
-    }else{
+    } else {
       System.out.println("goodbye");
     }
 
@@ -39,9 +42,9 @@ public class DemoString {
     // Metho 2 : equals() //等於
     String s1 = "hello";
     String s2 = "hello";
-    if (s1.equals(s2)){
+    if (s1.equals(s2)) {
      System.out.println("they are having same String Value.");  //print
-    } else{
+    } else {
       System.out.println("they are not with the same value.");
     }
 
@@ -133,7 +136,6 @@ public class DemoString {
     System.out.println(x6.length()); //3
    
 
-
     String x4 = x3.substring(0,3);
     int l1 = x4.length();
     System.out.println(l1); //3
@@ -146,16 +148,16 @@ public class DemoString {
     // isEmpty()
     // Empty String value -> ""
     String x7 = "";
-    System.out.prirtln(x7.isEmpty()); // true
+    System.out.println(x7.isEmpty()); // true
     String x8 = "abc";
     System.out.println(x8.isEmpty()); // false
     System.out.println(x7.length() == 0); // true
 
     // isBlack()
     String x9 = "";
-    System.out.println(x9.isBlack()); // true
+    System.out.println(x9.isBlank()); // true
     x9 = " ";
-    System.out.println(x9.isBlack()); // true
+    System.out.println(x9.isBlank()); // true
     System.out.println(x9.isEmpty()); // false
 
     // Substring(0,3)
@@ -181,24 +183,59 @@ public class DemoString {
     System.out.println(s10.endsWith("o")); // true
 
     // trim(), removing the space chartacters at the head/tail of the string.
-    String s12 = "    Hello,   bttocamp !!!   ";
+    String s12 = "    Hello,   bootcamp !!!   ";
     System.out.println(s12.trim()); // Hello,  bootcamp !!!
 
-    String[] string = new String[] {"hello", "abcijk", "vincent", "HeLLo", "  HELLO   "};
+    String[] strings = 
+      new String[] {"hello", "abcijk", "vincent", "HeLLo", "  HELLO   "};
     // how many string contains "ELL", but ignore case
-    // "ell" or "ell" or "ELL" .........
+    // "eLL" or "ell" or "ELl" .........
     // toUpperCase(), contains()
-  
+    int count = 0;
+    for (int i = 0; i < strings.length; i++) {
+      if (strings[i].toUpperCase().contains("ELL")) {
+        count++;
+      }
+    }
+    System.out.println(count);
+
+    // equalsIgnoreCase()
+    for ( int i = 0; i < strings.length; i++) {
+      if (strings[i].trim().equalsIgnoreCase("HELLO")) {
+        System.out.println(strings[i]);
+      }
+    }
+
+    String s13 = "helloll";
+    System.out.println(s13.indexOf("ll")); // 2, the first pattern
+    System.out.println(s13.indexOf('e')); // 1
+    System.out.println(s13.indexOf('l')); // 2, first character of 'l'
+    System.out.println(s13.indexOf("ll", 4)); // 5
+    System.out.println(s13.indexOf("ll", 6)); // -1
+    System.out.println(s13.indexOf(101)); // 1, ascii 'e' -> 101
+
+    System.out.println(s13.lastIndexOf("ll")); // 5, the last occurence of the pattern
+    System.out.println(s13.lastIndexOf('e')); // 1
+
+    String s14 = "abc";
+    s14 += "def";
+    System.out.println(s14); // abcdef
+
+    String s15 = "abc";
+    s15 = s15.concat("def"); // better performance
+    System.out.println(s15); // abcdef
+
+    String s16 = "abc";
+    String s17 = "abc";
+    System.out.println(s16.compareTo(s17)); // 0, the value of s14 = the value of s15
+    System.out.println(s16.equals(s17)); // true
+    System.out.println(s16 == s17); // true ??!! comparing the string object address
+
+    char c = 'a' + 1; // -> 
+    System.out.println(c); // b
 
 
-
-
-
-
-
+  }
   
   }
-
-}
-  
 }
