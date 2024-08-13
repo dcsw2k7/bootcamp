@@ -22,5 +22,28 @@ public class DemoInteger {
     // System.out.println(i1 >= i2); // false
 
   
+
+    // Flocat, double ( no internal cache in jvm)
+    Float f1 = 10.12345f; // autobox: float value -> float object 因指向ObjectT會自己AUTOBOX
+    Float f2 = 10.12345f; // autobox: float value -> float object
+    System.out.println(f1 == f2);  // false
+
+    double d1 = 128.12345d; // autobox: double value -> double Object  因指向ObjectT會自己AUTOBOX
+    double d2 = 128.12345d; // autobox: double value -> double Object
+    System.out.println(d1 == d2);  //false
+
+    //Boolean: support Internal cacha
+    boolean b1 = true;
+    boolean b2 = true;
+    System.out.println(b1 == b2);
+
+    // character: Support internal cache (-128 to 127)
+    Character c1 = 'c';  // autobox: char value -> character object
+    Character c2 = 'c';  // autobox: char value -> character object
+    System.out.println(c1 == c2);  turn
+
+    
+
+
   }
 }

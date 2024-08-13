@@ -1,6 +1,6 @@
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-
+// add加subtract減multiply乘divide除
 public class DemoBigDecimal {
     public static void main(String[] args) {
         double x = 0.2;
@@ -10,7 +10,7 @@ public class DemoBigDecimal {
         BigDecimal b1 = new BigDecimal("0.2");
         BigDecimal b2 = new BigDecimal ("0.1");
 
-        BigDecimal b3 = b1.multiply(b2);
+        BigDecimal b3 = b1.multiply(b2); // multiply乘
         System.out.println(b3.doubleValue()); // 0.02
 
 
@@ -18,7 +18,7 @@ public class DemoBigDecimal {
         System.out.println(0.2 + 0.1); // 0.30000000000000004
 
 
-        // Divide
+        // Divide除
         // method
         System.out.println(divide(9.9, 3.0)); // 3.3
         System.out.println(divide(9.9, 3.2)); // 3.09375 -> 3.094

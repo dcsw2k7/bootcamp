@@ -50,6 +50,12 @@ public class Cat { // Class name -> name Convention -> able to descride physical
     return s + "!!!";
   }
 
+  public boolean isTooOld() {
+    return this.age > 10;
+  }
+
+
+
   public static void main(String[] args) {
 
     // the purpost of static method -> produce something by the input paramters
@@ -61,7 +67,7 @@ public class Cat { // Class name -> name Convention -> able to descride physical
     System.out.println(3); //
 
     // how to call describe()
-    // instance menthod 
+    // instance menthod ia able to access ( read & write) the object attributes
     Cat cat = new Cat();
     cat.setAge(13);
     cat.setName("ABC");
@@ -69,6 +75,12 @@ public class Cat { // Class name -> name Convention -> able to descride physical
     // The age of this cat is 13, and name of this cat is ABC.
     System.out.println(cat.describe("."));
 
+    if (cat.getAge() > 10) { // what is defintion of age > 10?
+      // consult doctor ...
+    }
+    if (cat.isTooOld()) { 
+
+
+    }
   }
-}
 

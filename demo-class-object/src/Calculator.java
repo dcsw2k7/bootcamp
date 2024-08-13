@@ -4,7 +4,10 @@ public class Calculator {
   private int x;
   private int y;
 
-  // static method -> instance method ??!!
+  // static method -> instance method ??!! 
+  /*dc
+   static method公家東西只是放了在這裡可自用及被人用 
+  */
   public static int sum(int x, int y) {
     return x + y;
   }
@@ -89,6 +92,21 @@ public class Calculator {
     Calculator.test2(new String[] {"abc", "ijk"});
     Calculator.test2("abc", "ijk");
 
+    // static
+    Calculator.sum(3, 2); // 5
+    // new Calculator().setX(3);  /* 這個NEW方法是找不到的，因為無為他名明ID,用不了找不到。要像下行那樣為他命名 Calculator x */
+    Calculator x = new Calculator();
+    x.setX(3); // instance method
+    x.setX(3); // instance method
+    System.out.println(x.sum()); // 5
+
+    System.out.println(x.sum(3, 2)); // call static method
+    // object reference is able to cal static mentod
+
+    // Calculator.sum();  // instance method cannot be called by class Name
+
+    // Static method can be called by instance (object) or Class Name
+    // Instance method 
 
 
 
